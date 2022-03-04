@@ -5,14 +5,14 @@ This is a basic module that I made to clean up your code when importing, loading
 
 
 
-#How to import Ez Animation Loader
+# How to import Ez Animation Loader
 
 ```lua
 local animationLoader = require(game.ReplicatedStorage.EzAnims)
 ```
 
 
-#How to use Ez Animation Loader
+# How to use Ez Animation Loader
 
 ```lua
 -- Playing Animation:
