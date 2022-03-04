@@ -1,0 +1,52 @@
+
+--Documentation: 
+
+
+local AnimationPlayer = {}
+
+function AnimationPlayer:PlayAnimation(target,anim,debug)
+	if debug == true then
+		print("Starting animation ".. anim.Name.." for ".. target.Name)
+	end
+	if target:FindFirstChildWhichIsA("Humanoid") then
+		local loadedAnimation = target:FindFirstChildWhichIsA("Humanoid"):LoadAnimation(anim)
+		loadedAnimation:Play()
+		if debug == true then
+			print("Playing "..anim.Name)
+		end
+	else if target:FindFirstChildWhichIsA("AnimationController")  then
+			local loadedAnimation = target:FindFirstChildWhichIsA("AnimationController"):LoadAnimation(anim)
+			loadedAnimation:Play()
+			if debug == true then
+				print("Playing "..anim.Name)
+			end
+		end
+	end
+end
+function AnimationPlayer:StopAnimation(target,anim,debug)
+	if target:FindFirstChildWhichIsA("Humanoid") then
+		local AnimationTracks = target:FindFirstChildWhichIsA("Humanoid"):GetPlayingAnimationTracks()
+		for e,d in pairs(AnimationTracks) do
+			if d.Name == anim.Name then
+				d:Stop()
+				if debug == true then
+					print("Stopped "..anim.Name)
+				end
+			end
+		end
+	else if target:FindFirstChildWhichIsA("AnimationController")  then
+			local AnimationTracks = target:FindFirstChildWhichIsA("AnimationController"):GetPlayingAnimationTracks()
+			for e,d in pairs(AnimationTracks) do
+				if d.Name == anim.Name then
+					d:Stop()
+					if debug == true then
+						print("Stopped "..anim.Name)
+					end
+				end
+			end
+		end
+	end
+end
+
+
+return AnimationPlayer
