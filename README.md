@@ -15,8 +15,17 @@ local animationLoader = require(game.ReplicatedStorage.EzAnims)
 #How to use Ez Animation Loader
 
 ```lua
+-- Playing Animation:
+
 animationLoader:PlayAnimation(CharacterObject, AnimationObject, ShowDebug)
 
 -- Example:
 animationLoader:PlayAnimation(char,script.Animation,true)  
+
+-- Stopping Animation:
+
+animationLoader:StopAnimation(CharacterObject, AnimationObject, ShowDebug)
+
+-- Example:
+animationLoader:StopAnimation(char,script.Animation,true)  
 ```
