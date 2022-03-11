@@ -1,5 +1,5 @@
 
---Documentation: 
+--Documentation: https://github.com/TheNamesLua/Ez-Animation-Loader/blob/main/README.md
 
 
 local AnimationPlayer = {}
