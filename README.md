@@ -8,6 +8,8 @@ Easily load, play, and stop animations.
 
 This is a basic module that I made to clean up your code when importing, loading, and stopping animations easier.
 
+!Avoid having duplicate animation names!
+
 
 
 # How to import Ez Animation Loader
