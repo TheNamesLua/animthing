@@ -1,6 +1,11 @@
 # Ez-Animation-Loader V2.0
 Easily load, play, and stop animations.
 
+
+# 2.0 Features
+- You can now adjust an animations speed
+- Cleaned up code
+
 This is a basic module that I made to clean up your code when importing, loading, and stopping animations easier.
 
 
