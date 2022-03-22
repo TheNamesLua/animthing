@@ -1,5 +1,9 @@
+--[[
+-Full Documentation: https://github.com/TheNamesLua/Ez-Animation-Loader/blob/main/README.md
+-How To Import: https://github.com/TheNamesLua/Ez-Animation-Loader/blob/main/README.md
+-How To Use: https://github.com/TheNamesLua/Ez-Animation-Loader/blob/main/README.md#how-to-use-ez-animation-loader
 
---Documentation: https://github.com/TheNamesLua/Ez-Animation-Loader/blob/main/README.md
+]]
 
 
 local AnimationPlayer = {}
@@ -29,9 +33,6 @@ function AnimationPlayer:StopAnimation(target,anim,debug)
 		for e,d in pairs(AnimationTracks) do
 			if d.Name == anim.Name then
 				d:Stop()
-				if debug == true then
-					print("Stopped "..anim.Name)
-				end
 			end
 		end
 	else if target:FindFirstChildWhichIsA("AnimationController")  then
@@ -39,14 +40,29 @@ function AnimationPlayer:StopAnimation(target,anim,debug)
 			for e,d in pairs(AnimationTracks) do
 				if d.Name == anim.Name then
 					d:Stop()
-					if debug == true then
-						print("Stopped "..anim.Name)
-					end
 				end
 			end
 		end
 	end
 end
 
+function AnimationPlayer:ChangeSpeed(target,anim,speed)
+	if target:FindFirstChildWhichIsA("Humanoid") then
+		local AnimationTracks = target:FindFirstChildWhichIsA("Humanoid"):GetPlayingAnimationTracks()
+		for e,d in pairs(AnimationTracks) do
+			if d.Name == anim.Name then
+				d:AdjustSpeed(speed)
+			end
+		end
+	else if target:FindFirstChildWhichIsA("AnimationController")  then
+			local AnimationTracks = target:FindFirstChildWhichIsA("AnimationController"):GetPlayingAnimationTracks()
+			for e,d in pairs(AnimationTracks) do
+				if d.Name == anim.Name then
+					d:AdjustSpeed(speed)
+				end
+			end
+		end
+	end
+end
 
 return AnimationPlayer
