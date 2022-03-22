@@ -32,4 +32,11 @@ animationLoader:StopAnimation(CharacterObject, AnimationObject)
 
 -- Example:
 animationLoader:StopAnimation(char,script.Animation)  
+
+
+-- Adjusting Animation Speed:
+animationLoader:ChangeSpeed(CharacterObject, AnimationObject, Speed)
+
+-- Example:
+animationLoader:ChangeSpeed(char,script.Animation, 2)  
 ```
