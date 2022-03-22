@@ -1,4 +1,4 @@
-# Ez-Animation-Loader
+# Ez-Animation-Loader V2.0
 Easily load, play, and stop animations.
 
 This is a basic module that I made to clean up your code when importing, loading, and stopping animations easier.
@@ -16,15 +16,15 @@ local animationLoader = require(game.ReplicatedStorage.EzAnims)
 
 ```lua
 -- Playing Animation:
-animationLoader:PlayAnimation(CharacterObject, AnimationObject, ShowDebug)
+animationLoader:PlayAnimation(CharacterObject, AnimationObject)
 
 -- Example:
-animationLoader:PlayAnimation(char,script.Animation,true)  
+animationLoader:PlayAnimation(char,script.Animation)  
 
 
 -- Stopping Animation:
-animationLoader:StopAnimation(CharacterObject, AnimationObject, ShowDebug)
+animationLoader:StopAnimation(CharacterObject, AnimationObject)
 
 -- Example:
-animationLoader:StopAnimation(char,script.Animation,true)  
+animationLoader:StopAnimation(char,script.Animation)  
 ```
