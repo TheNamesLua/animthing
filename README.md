@@ -45,6 +45,10 @@ animationLoader:ChangeSpeed(char,script.Animation, 2)
 # Extra features
 You can parse a third argument in any of the functions.
 Example:
+```lua
 animationLoader:PlayAnimation(char,script.Animation,true)
+```
 This will print:
+```lua
 "Starting animation ANIMATIONNAME for PLAYERNAME"
+```
