@@ -1,12 +1,12 @@
 # Ez-Animation-Loader V2.0
-Easily load, play, and stop animations.
+Easily load, play, adjust, and stop animations.
 
 
 # 2.0 Features
 - You can now adjust an animations speed
 - Cleaned up code
 
-This is a basic module that I made to clean up your code when importing, loading, and stopping animations easier.
+This is a basic module that I made to clean up your code and to make importing, loading, adjusting, and stopping animations easier.
 
 !Avoid having duplicate animation names!
 
@@ -43,7 +43,7 @@ animationLoader:ChangeSpeed(CharacterObject, AnimationObject, Speed)
 animationLoader:ChangeSpeed(char,script.Animation, 2)  
 ```
 # Extra features
-You can parse a third argument in any of the functions.
+You can parse an extra argument in any of the functions.
 Example:
 ```lua
 animationLoader:PlayAnimation(char,script.Animation,true)
