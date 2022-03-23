@@ -42,3 +42,9 @@ animationLoader:ChangeSpeed(CharacterObject, AnimationObject, Speed)
 -- Example:
 animationLoader:ChangeSpeed(char,script.Animation, 2)  
 ```
+# Extra features
+You can parse a third argument in any of the functions.
+Example:
+animationLoader:PlayAnimation(char,script.Animation,true)
+This will print:
+"Starting animation ANIMATIONNAME for PLAYERNAME"
